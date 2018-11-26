@@ -180,4 +180,10 @@ fabric.properties
 # Sonarlint plugin
 .idea/sonarlint
 
+# Env Files
+.env
+.env.example
+.env.local
+.env.staging
+
 # End of https://www.gitignore.io/api/sass,node,linux,webstorm
