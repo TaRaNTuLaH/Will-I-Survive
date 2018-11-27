@@ -1,7 +1,7 @@
 var path = require("path");
 var Html = require('html-webpack-plugin');
 var MiniCSS = require("mini-css-extract-plugin");
-
+var Dotenv = require('dotenv-webpack')
 
 module.exports = function(env) {
   const isDev = env && env.dev ? true : false;
@@ -96,8 +96,12 @@ module.exports = function(env) {
       }),
       new MiniCSS({
         filename: "app.css",
+      }),
+      new Dotenv({
+      path: path.resolve(__dirname, './src/.env.test')
       })
     ]
+
   }
 
   return config;

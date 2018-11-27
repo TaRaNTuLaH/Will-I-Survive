@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$mainColor: #BCAA99;
+
+html{
+  width:100%;
+  height:100%;
+  background-color: $mainColor;
+}
+
+body{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header{
+  height: 120px;
+  background-color: $mainColor;
+}
+
+.mainSection{
+  height: 710px;
+  background-color: red;
+  display: flex;
+}
+
+.weatherInformation{
+  height:710px;
+  width: 25%;
+  border: 1px solid black;
+}
+
+.mapPicture{
+  height:710px;
+  width: 75%;
+  border: 1px solid black;
+}
+
+.footer{
+  height: 120px;
+  background-color: $mainColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footerText{
+  font-size: 30px;
+  color:#040F0F;
+}
+
+.footerSocials{
+  li{
+   list-style: none;
+   font-size: 50px;
+    display: inline-block;
+    margin-left: 50px;
+  }
+
+  li:nth-child(1){
+    a{
+      color: #176BB7;
+    }
+  }
+
+  li:nth-child(2){
+    a{
+      color:#292D32;
+    }
+  }
+}
