@@ -4,6 +4,8 @@ import Header from "../components/Header.jsx"
 import "./main.scss"
 import MainSection from "../components/MainSection.jsx";
 import Footer from "../components/Footer.jsx";
+import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
+import Leaflet from 'leaflet/dist/leaflet.css'
 
 class App extends React.Component{
     render() {

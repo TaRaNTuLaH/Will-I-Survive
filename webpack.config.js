@@ -98,7 +98,7 @@ module.exports = function(env) {
         filename: "app.css",
       }),
       new Dotenv({
-      path: path.resolve(__dirname, './src/.env.test')
+      path: path.resolve(__dirname, './components/.env')
       })
     ]
 
