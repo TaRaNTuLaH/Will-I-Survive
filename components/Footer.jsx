@@ -1,8 +1,6 @@
 import React from "react"
 
-import functions from "./DrawMap.jsx"
 
-functions.foo();
 
 class Footer extends React.Component{
     render(){

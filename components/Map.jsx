@@ -2,6 +2,7 @@ import React from "react"
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
 import Leaflet from 'leaflet/dist/leaflet.css'
 
+
 class MapPicture extends React.Component{
     state = {
         lat: 51.1107811,
@@ -16,6 +17,7 @@ class MapPicture extends React.Component{
             <TileLayer
                 attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+            <Marker position={position}> </Marker>
         </Map>
     }
 }
