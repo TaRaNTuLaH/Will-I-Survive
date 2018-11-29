@@ -15,11 +15,11 @@ class MainSection extends React.Component{
 
     getWeatherInfo = async (e) => {
         e.preventDefault();
-        const api_call = await fetch (`https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=${API_KEY}`);
+        const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${this.props.lat}&lon=${this.props.lng}&appid=${API_KEY}`);
         const data = await api_call.json();
         console.log(data);
         this.setState({
-            temperature: data.main.temp,
+            temperature: (data.main.temp - 273).toPrecision(3),
             humidity: data.main.humidity,
             aPressure: data.main.pressure,
             weather: data.weather[0].main
@@ -34,7 +34,7 @@ class MainSection extends React.Component{
                          aPressure = {this.state.aPressure}
                          weather = {this.state.weather}
             />
-            <MapPicture/>
+            <MapPicture lat = {this.props.lat} lng = {this.props.lng}/>
         </div>
     }
 }

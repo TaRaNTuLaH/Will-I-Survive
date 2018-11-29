@@ -12,12 +12,43 @@ import "babel-polyfill"
 
 class App extends React.Component{
 
+    constructor() {
+        super();
+
+        this.state = {
+            latitude: '',
+            longitude: '',
+        };
+
+        this.getMyLocation = this.getMyLocation.bind(this)
+    }
+    componentDidMount() {
+        this.getMyLocation()
+    }
+
+    getMyLocation() {
+        const location = window.navigator && window.navigator.geolocation;
+
+        if (location) {
+            location.getCurrentPosition((position) => {
+                this.setState({
+                    latitude: position.coords.latitude,
+                    longitude: position.coords.longitude,
+                })
+            }, (error) => {
+                this.setState({ latitude: 'err-latitude', longitude: 'err-longitude' })
+            })
+        }
+
+    }
+
     render() {
+        const { latitude, longitude } = this.state;
         return(
         <div>
             <Header/>
-            <MainSection/>
-            <Footer/>
+            <MainSection lat = {latitude} lng ={longitude}/>
+            <Footer />
         </div>)
 
     }

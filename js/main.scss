@@ -24,7 +24,7 @@ body{
 
 .mainSection{
   height: 710px;
-  background-color: #C6BED1;
+  background-color: #FEFEFE;
   display: flex;
 }
 
@@ -47,10 +47,14 @@ body{
   height: 640px;
   width: 100%;
   p{
-    margin-bottom: 122px;
     font-size: 24px;
     text-align: center;
   }
+}
+
+.result{
+  height: 122px;
+  width: 100%;
 }
 
 .weatherInfoBtn{
