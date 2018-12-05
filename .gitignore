@@ -187,4 +187,9 @@ fabric.properties
 .env.local
 .env.staging
 
+#Build
+
+build
+/build
+
 # End of https://www.gitignore.io/api/sass,node,linux,webstorm
